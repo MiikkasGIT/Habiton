@@ -18,10 +18,6 @@
 - **Datenbank**: SQLite
 - **Benachrichtigungen**: Android Push Notifications
 
-## Installation
-1. **APK-Datei installieren**: Lade die neueste Version der APK von [GitHub Releases](https://github.com/DeinGitHubProfil/Habiton/releases) herunter und installiere sie auf deinem Android-Gerät.
-2. **App starten**: Öffne die App und erstelle deine erste Gewohnheit.
-
 ## Funktionen im Detail
 ### 1. Dashboard
 Das Dashboard zeigt eine Übersicht deiner aktuellen Gewohnheiten. Du kannst neue Gewohnheiten hinzufügen, bestehende bearbeiten oder löschen.
