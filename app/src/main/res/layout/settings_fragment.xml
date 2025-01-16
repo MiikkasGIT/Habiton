@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/backing_light"
+        android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/riu7a15svgn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+
+
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/backicon"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="20dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/back"
+            android:contentDescription="@string/back" />
+
+        <TextView
+            android:id="@+id/page_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="65dp"
+            android:fontFamily="@font/sf_semibold"
+
+            android:text="@string/settings"
+            android:textColor="#1C1D1F"
+            android:textSize="24sp"
+            android:gravity="center"
+            android:layout_gravity="center_vertical|start" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="18dp"
+        android:background="@drawable/border20"
+        android:backgroundTint="@color/module"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
+
+
+        <com.google.android.material.materialswitch.MaterialSwitch
+            android:id="@+id/notification_toggle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="20dp"
+            android:checked="true"
+            android:fontFamily="@font/inter_semibold"
+            android:text="@string/notifications"
+            android:textSize="18sp"
+            tools:ignore="TextSizeCheck" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="5dp"
+                android:fontFamily="@font/inter_semibold"
+                android:text="@string/morning_reminder"
+
+                android:textSize="18sp"
+                tools:ignore="RelativeOverlap,TextSizeCheck" />
+
+            <Button
+                android:id="@+id/morning_picker"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="5dp"
+                android:fontFamily="@font/inter_semibold"
+                android:text="@string/select"
+                android:textColor="@color/backing_dark"
+                android:textSize="16sp"
+                tools:ignore="RelativeOverlap,TextSizeCheck" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+
+                android:layout_marginStart="5dp"
+                android:fontFamily="@font/inter_semibold"
+                android:text="@string/evening_reminder"
+
+                android:textSize="18sp"
+                tools:ignore="RelativeOverlap,TextSizeCheck" />
+
+            <Button
+                android:id="@+id/evening_picker"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="5dp"
+                android:fontFamily="@font/inter_semibold"
+                android:text="@string/select"
+                android:textColor="@color/backing_dark"
+                android:textSize="16sp"
+                tools:ignore="RelativeOverlap,TextSizeCheck" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

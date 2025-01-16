@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="habit"
+            type="de.hsos.habiton.database.models.Habit" />
+        <variable
+            name="tracking"
+            type="de.hsos.habiton.database.models.HabitTracking" />
+    </data>
+
+    <LinearLayout
+        android:id="@+id/sleep_module"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:background="@{tracking.status ? @drawable/selcted_habit : @drawable/habit_module}"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="15dp"
+        tools:ignore="MissingConstraints"
+        android:baselineAligned="false">
+
+        <LinearLayout
+            android:id="@+id/sleep"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/border10"
+            android:gravity="center"
+            app:backgroundTintByIcon="@{habit.icon}">
+
+            <TextView
+                android:id="@+id/icon_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="9dp"
+                android:textSize="20sp"
+                app:iconSrc="@{habit.icon}" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/namespace"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="2dp"
+            android:layout_weight="1"
+            android:layout_marginBottom="5dp"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sf_semibold"
+                android:gravity="bottom"
+                android:text="@{habit.name}"
+                android:textColor="#1C1D1F"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{habit.description}"
+                android:textColor="#8F98A0"
+                android:textSize="14sp"
+                android:gravity="top" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/streak_box"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:background="@{tracking.status ? @drawable/streak_module_selected : @drawable/streak_module}"
+            android:gravity="center"
+            android:layout_marginEnd="10dp"
+            android:orientation="horizontal"
+            android:paddingVertical="6dp">
+
+            <ImageView
+                android:id="@+id/streak_icon"
+                android:layout_width="13dp"
+                android:layout_height="16dp"
+                android:layout_marginEnd="7dp"
+                android:scaleType="fitXY"
+                android:src="@{tracking.status ? @drawable/streak_green : @drawable/streak}"
+                android:contentDescription="@string/streak" />
+
+            <TextView
+                android:id="@+id/streak_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{`` + habit.streak}"
+                android:fontFamily="@font/inter_semibold"
+                android:textColor="@{tracking.status ? @color/primary : @color/subtext}"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</layout>

@@ -1,0 +1,16 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/border20"
+    android:backgroundTint="@color/module">
+
+    <!-- Dieser LinearLayout-Container wird dynamisch mit Inhalten gefüllt -->
+    <LinearLayout
+        android:id="@+id/popupContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="18dp"
+        />
+</LinearLayout>

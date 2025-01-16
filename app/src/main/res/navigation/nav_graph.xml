@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/DashboardFragment">
+
+    <fragment
+        android:id="@+id/DashboardFragment"
+        android:name="de.hsos.habiton.views.DashboardFragment"
+        android:label="Home" />
+    <fragment
+        android:id="@+id/CreateHabitFragment"
+        android:name="de.hsos.habiton.views.AddHabitFragment"
+        android:label="Add Habit" />
+    <fragment
+        android:id="@+id/analyticsFragment"
+        android:name="de.hsos.habiton.views.AnalyticsFragment"
+        android:label="Analytics" />
+
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="de.hsos.habiton.views.SettingsFragment"
+        android:label="settings_fragment"
+        tools:layout="@layout/settings_fragment" />
+
+    <action
+        android:id="@+id/action_dashboardFragment_to_settingsFragment"
+        app:destination="@id/settingsFragment" />
+    <action
+        android:id="@+id/action_settingsFragment_to_dashboardFragment"
+        app:destination="@id/DashboardFragment" />
+</navigation>

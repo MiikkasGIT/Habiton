@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="habit"
+            type="de.hsos.habiton.database.models.Habit" />
+
+        <variable
+            name="tracking"
+            type="de.hsos.habiton.database.models.HabitTracking" />
+    </data>
+
+    <LinearLayout
+        android:id="@+id/sleep_module"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:id="@+id/sleep"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="10dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/icon_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="9dp"
+                android:textSize="20sp"
+                app:iconSrc="@{habit.icon}" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/spacer"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="2dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sf_semibold"
+                android:gravity="top"
+                android:text="@{habit.name}"
+                android:textColor="#1C1D1F"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/streak_box"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:background="@{tracking.status ? @drawable/streak_module_selected : @drawable/streak_module}"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingVertical="6dp">
+
+            <ImageView
+                android:id="@+id/streak_icon"
+                android:layout_width="13dp"
+                android:layout_height="16dp"
+                android:layout_marginEnd="7dp"
+                android:scaleType="fitXY"
+                android:src="@{tracking.status ? @drawable/streak_green : @drawable/streak}"
+                android:contentDescription="@string/streak" />
+
+            <TextView
+                android:id="@+id/streak_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter_semibold"
+                android:text="@{`` + habit.streak}"
+                android:textColor="@{tracking.status ? @color/primary : @color/subtext}"
+                android:textSize="14sp" />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/longest_streak_number"
+            android:layout_width="58dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sf_semibold"
+            android:gravity="center"
+            android:minHeight="48dp"
+            android:textColor="#1C1D1F"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+
+</layout>

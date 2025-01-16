@@ -1,0 +1,473 @@
+<!-- Erstellt von Finn Garrels -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#26000000">
+
+    <!-- Popup Settings -->
+    <LinearLayout
+        android:id="@+id/popupLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/popup_module"
+        android:orientation="vertical"
+        >
+
+        <!-- Popup Title -->
+        <LinearLayout
+            android:id="@+id/popupTitleLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="22dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingTop="10dp">
+
+            <TextView
+                android:id="@+id/titleTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sf_semibold"
+                android:text="@string/add_habits"
+                android:textColor="#1C1D1F"
+                android:textSize="24sp" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:id="@+id/closeicon"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:contentDescription="@string/x"
+                android:scaleType="fitXY"
+                android:src="@drawable/close"
+                tools:ignore="ImageContrastCheck" />
+        </LinearLayout>
+
+        <!-- Title & Description -->
+        <RelativeLayout
+            android:id="@+id/titleDescriptionLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+            <!-- Erstes Eingabefeld -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/titleInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:hint="@string/title"
+                app:boxBackgroundColor="@color/module"
+                app:boxCornerRadiusBottomEnd="15dp"
+                app:boxCornerRadiusBottomStart="15dp"
+                app:boxCornerRadiusTopEnd="15dp"
+                app:boxCornerRadiusTopStart="15dp"
+                app:boxStrokeColor="@color/highlight"
+                app:boxStrokeWidth="1dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/add_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    app:boxBackgroundColor="@color/module"
+                    app:boxCornerRadiusBottomEnd="15dp"
+                    app:boxCornerRadiusBottomStart="15dp"
+                    app:boxCornerRadiusTopEnd="15dp"
+                    app:boxCornerRadiusTopStart="15dp"
+                    app:boxStrokeColor="@color/highlight"
+                    app:boxStrokeWidth="1dp"
+                    tools:ignore="TextContrastCheck" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Zweites Eingabefeld -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/descriptionInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/titleInputLayout"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:hint="@string/description"
+                app:boxBackgroundColor="@color/module"
+                app:boxCornerRadiusBottomEnd="15dp"
+                app:boxCornerRadiusBottomStart="15dp"
+                app:boxCornerRadiusTopEnd="15dp"
+                app:boxCornerRadiusTopStart="15dp"
+                app:boxStrokeColor="@color/highlight"
+                app:boxStrokeWidth="1dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/add_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:textColorHint="#757575"
+                    app:boxBackgroundColor="@color/module"
+                    app:boxCornerRadiusBottomEnd="15dp"
+                    app:boxCornerRadiusBottomStart="15dp"
+                    app:boxCornerRadiusTopEnd="15dp"
+                    app:boxCornerRadiusTopStart="15dp"
+                    app:boxStrokeColor="@color/highlight"
+                    app:boxStrokeWidth="1dp"
+                    tools:ignore="TextContrastCheck">
+
+                </com.google.android.material.textfield.TextInputEditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </RelativeLayout>
+
+
+        <!-- Grid -->
+        <GridLayout
+            android:id="@+id/iconButtonGrid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_marginHorizontal="20dp"
+            android:columnCount="5"
+            android:rowCount="3">
+            <!-- Row 1 -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button1"
+                android:layout_width="60dp"
+                android:layout_height="64dp"
+                android:padding="12dp"
+                android:text=""
+                app:backgroundTint="@color/module"
+                app:cornerRadius="10dp"
+                app:icon="@drawable/workout"
+                app:iconSize="36dp"
+                app:iconTint="@color/workout"
+                app:strokeColor="@color/highlight"
+                app:strokeWidth="2dp"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button2"
+                android:layout_width="60dp"
+                android:layout_height="64dp"
+                android:layout_marginStart="12dp"
+                android:contentDescription="@string/btn"
+                android:padding="12dp"
+                app:backgroundTint="@color/module"
+                app:cornerRadius="10dp"
+                app:icon="@drawable/walk"
+                app:iconSize="36dp"
+                app:iconTint="@color/walk"
+                app:strokeColor="@color/highlight"
+                app:strokeWidth="2dp"
+                tools:ignore="DuplicateSpeakableTextCheck" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button3"
+                android:layout_width="60dp"
+                android:layout_height="64dp"
+                android:layout_marginStart="12dp"
+                android:contentDescription="@string/btn"
+                android:padding="12dp"
+                android:text=""
+                app:backgroundTint="@color/module"
+                app:cornerRadius="10dp"
+                app:icon="@drawable/book"
+                app:iconSize="36dp"
+                app:iconTint="@color/book"
+                app:strokeColor="@color/highlight"
+                app:strokeWidth="2dp"
+                tools:ignore="HardcodedText" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button4"
+                android:layout_width="60dp"
+                android:layout_height="64dp"
+                android:layout_marginStart="12dp"
+                android:contentDescription="@string/btn"
+                android:padding="12dp"
+                android:text=""
+                app:backgroundTint="@color/module"
+                app:cornerRadius="10dp"
+                app:icon="@drawable/music"
+                app:iconSize="36dp"
+                app:iconTint="@color/music"
+                app:strokeColor="@color/highlight"
+                app:strokeWidth="2dp"
+                tools:ignore="HardcodedText" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button5"
+                android:layout_width="60dp"
+                android:layout_height="64dp"
+                android:layout_marginStart="12dp"
+                android:contentDescription="@string/btn"
+                android:padding="12dp"
+                android:text=""
+                app:backgroundTint="@color/module"
+                app:cornerRadius="10dp"
+                app:icon="@drawable/sleep"
+                app:iconSize="36dp"
+                app:iconTint="@color/sleep"
+                app:strokeColor="@color/highlight"
+                app:strokeWidth="2dp" />
+
+            <!-- Row 2 -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button6"
+                android:layout_width="60dp"
+                android:layout_height="64dp"
+                android:contentDescription="@string/btn"
+                android:padding="12dp"
+                android:text=""
+                app:backgroundTint="@color/module"
+                app:cornerRadius="10dp"
+                app:icon="@drawable/water"
+                app:iconSize="36dp"
+                app:iconTint="@color/water"
+                app:strokeColor="@color/highlight"
+                app:strokeWidth="2dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button7"
+                android:layout_width="60dp"
+                android:layout_height="64dp"
+                android:layout_marginStart="12dp"
+                android:contentDescription="@string/btn"
+                android:padding="12dp"
+                android:text=""
+                app:backgroundTint="@color/module"
+                app:cornerRadius="10dp"
+                app:icon="@drawable/clock"
+                app:iconSize="36dp"
+                app:iconTint="@color/clock"
+                app:strokeColor="@color/highlight"
+                app:strokeWidth="2dp"
+                tools:ignore="HardcodedText" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button8"
+                android:layout_width="60dp"
+                android:layout_height="64dp"
+                android:layout_marginStart="12dp"
+                android:contentDescription="@string/btn"
+                android:padding="12dp"
+                android:text=""
+                app:backgroundTint="@color/module"
+                app:cornerRadius="10dp"
+                app:icon="@drawable/cook"
+                app:iconSize="36dp"
+                app:iconTint="@color/cook"
+                app:strokeColor="@color/highlight"
+                app:strokeWidth="2dp"
+                tools:ignore="HardcodedText" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button9"
+                android:layout_width="60dp"
+                android:layout_height="64dp"
+                android:layout_marginStart="12dp"
+                android:contentDescription="@string/btn"
+                android:padding="12dp"
+                android:text=""
+                app:backgroundTint="@color/module"
+                app:cornerRadius="10dp"
+                app:icon="@drawable/learn"
+                app:iconSize="36dp"
+                app:iconTint="@color/learn"
+                app:strokeColor="@color/highlight"
+                app:strokeWidth="2dp"
+                tools:ignore="HardcodedText" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button10"
+                android:layout_width="60dp"
+                android:layout_height="64dp"
+                android:layout_marginStart="12dp"
+                android:contentDescription="@string/btn"
+                android:padding="12dp"
+                android:text=""
+                app:backgroundTint="@color/module"
+                app:cornerRadius="10dp"
+                app:icon="@drawable/meditate"
+                app:iconSize="36dp"
+                app:iconTint="@color/meditate"
+                app:strokeColor="@color/highlight"
+                app:strokeWidth="2dp" />
+
+            <!-- Row 3 -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button11"
+                android:layout_width="60dp"
+                android:layout_height="64dp"
+                android:contentDescription="@string/btn"
+                android:padding="12dp"
+                android:text=""
+                app:backgroundTint="@color/module"
+                app:cornerRadius="10dp"
+                app:icon="@drawable/inbox"
+                app:iconSize="36dp"
+                app:iconTint="@color/inbox"
+                app:strokeColor="@color/highlight"
+                app:strokeWidth="2dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button12"
+                android:layout_width="60dp"
+                android:layout_height="64dp"
+                android:layout_marginStart="12dp"
+                android:contentDescription="@string/btn"
+                android:padding="12dp"
+                android:text=""
+                app:backgroundTint="@color/module"
+                app:cornerRadius="10dp"
+                app:icon="@drawable/laptop"
+                app:iconSize="36dp"
+                app:iconTint="@color/laptop"
+                app:strokeColor="@color/highlight"
+                app:strokeWidth="2dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button13"
+                android:layout_width="60dp"
+                android:layout_height="64dp"
+                android:layout_marginStart="12dp"
+                android:contentDescription="@string/btn"
+                android:padding="12dp"
+                android:text=""
+                app:backgroundTint="@color/module"
+                app:cornerRadius="10dp"
+                app:icon="@drawable/nophone"
+                app:iconSize="36dp"
+                app:iconTint="@color/nophone"
+                app:strokeColor="@color/highlight"
+                app:strokeWidth="2dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button14"
+                android:layout_width="60dp"
+                android:layout_height="64dp"
+                android:layout_marginStart="12dp"
+                android:contentDescription="@string/btn"
+                android:padding="12dp"
+                android:text=""
+                app:backgroundTint="@color/module"
+                app:cornerRadius="10dp"
+                app:icon="@drawable/todo"
+                app:iconSize="36dp"
+                app:iconTint="@color/todo"
+                app:strokeColor="@color/highlight"
+                app:strokeWidth="2dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button15"
+                android:layout_width="60dp"
+                android:layout_height="64dp"
+                android:layout_marginStart="12dp"
+                android:contentDescription="@string/btn"
+                android:padding="12dp"
+                android:text=""
+                app:backgroundTint="@color/module"
+                app:cornerRadius="10dp"
+                app:icon="@drawable/food"
+                app:iconSize="36dp"
+                app:iconTint="@color/food"
+                app:strokeColor="@color/highlight"
+                app:strokeWidth="2dp"
+                tools:ignore="HardcodedText" />
+
+
+        </GridLayout>
+
+
+        <!-- Emoji Input -->
+        <LinearLayout
+            android:id="@+id/emoji"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:boxBackgroundColor="@color/module"
+                app:boxCornerRadiusBottomEnd="15dp"
+                app:boxCornerRadiusBottomStart="15dp"
+                app:boxCornerRadiusTopEnd="15dp"
+                app:boxCornerRadiusTopStart="15dp"
+                app:boxStrokeColor="@color/highlight"
+                app:boxStrokeWidth="1dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/emojiinput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:hint="@string/add_emoji"
+                    android:maxLength="2"
+                    tools:ignore="TextContrastCheck" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+        <!-- Action Buttons -->
+        <RelativeLayout
+            android:id="@+id/actionsbuttons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:paddingBottom="40dp"
+                tools:ignore="UselessParent">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnCancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_weight="3"
+
+                    android:backgroundTint="@color/highlight"
+                    android:text="@string/cancel"
+                    android:textColor="@color/subtext"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:cornerRadius="15dp"
+                    tools:ignore="TextContrastCheck" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnSave"
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_weight="7"
+                    android:backgroundTint="@color/backing_dark"
+                    android:text="@string/save"
+                    android:textColor="@color/backing_light"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:cornerRadius="15dp" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</RelativeLayout>

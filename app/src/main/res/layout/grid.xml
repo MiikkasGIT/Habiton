@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <GridLayout
+        android:id="@+id/iconButtonGrid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:columnCount="4"
+        android:rowCount="4"
+        android:alignmentMode="alignMargins"
+
+        android:orientation="horizontal"
+
+        tools:ignore="MissingConstraints">
+
+
+        <LinearLayout
+            android:id="@+id/sleep"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/border10"
+            android:backgroundTint="@color/highlight"
+            android:gravity="center">
+
+
+            <TextView
+                android:id="@+id/icon_view"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="9dp"
+                android:textSize="20sp"
+                app:icon="@drawable/sleep" />
+
+        </LinearLayout>
+    </GridLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

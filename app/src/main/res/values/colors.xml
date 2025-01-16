@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Basiskomponenten -->
+    <attr name="backing_light" format="color" />
+    <attr name="backing_dark" format="color" />
+    <attr name="highlight" format="color" />
+
+    <attr name="highlight_dark" format="color" />
+    <attr name="module" format="color" />
+    <attr name="module_dark" format="color" />
+
+    <!-- Dunkle Farben -->
+    <color name="backing_dark">#1C1D1F</color>
+    <color name="module_dark">#26282D</color>
+    <color name="highlight_dark">#31363E</color>
+    <color name="inbox">#31363E</color>
+
+    <!-- Helle Farben -->
+    <color name="backing_light">#F3F3F3</color>
+    <color name="module">#FFFFFF</color>
+    <color name="highlight">#E9E9E9</color>
+    <color name="subtext">#8F98A0</color>
+
+    <!-- Primärfarben -->
+    <color name="primary">#21C358</color>
+    <color name="primary75">#7521C358</color>
+    <color name="primary50">#5021C358</color>
+    <color name="primary25">#2521C358</color>
+
+    <!-- Icon Farben -->
+    <color name="secondary">#2621C358</color>
+    <color name="workout">#33D6E0</color>
+    <color name="walk">#FF6F6F</color>
+    <color name="book">#93897B</color>
+    <color name="music">#C06FFF</color>
+    <color name="sleep">#6F6FFF</color>
+    <color name="water">#4CA9FF</color>
+    <color name="clock">#FFA53B</color>
+    <color name="cook">#21C358</color>
+    <color name="learn">#21C3B0</color>
+    <color name="meditate">#E26FFF</color>
+    <color name="todo">#AC7B57</color>
+    <color name="food">#8F98A0</color>
+    <color name="laptop">#31363E</color>
+    <color name="nophone">#31363E</color>
+
+    <!-- Tönungsfarben -->
+    <color name="workout_tint">#1533D6E0</color>
+    <color name="walk_tint">#15FF6F6F</color>
+    <color name="book_tint">#1593897B</color>
+    <color name="music_tint">#15C06FFF</color>
+    <color name="sleep_tint">#156F6FFF</color>
+    <color name="water_tint">#154CA9FF</color>
+    <color name="clock_tint">#15FFA53B</color>
+    <color name="cook_tint">#1521C358</color>
+    <color name="learn_tint">#1521C3B0</color>
+    <color name="meditate_tint">#15E26FFF</color>
+    <color name="inbox_tint">#1531363E</color>
+    <color name="laptop_tint">#1531363E</color>
+    <color name="todo_tint">#15AC7B57</color>
+    <color name="food_tint">#158F98A0</color>
+
+    <!-- Sonstige Farben -->
+    <color name="default_background_tint">#158F98A0</color>
+    <color name="brand_tint">#1521C358</color>
+    <color name="error">#EB5757</color>
+    <color name="error_tint">#15EB5757</color>
+</resources>

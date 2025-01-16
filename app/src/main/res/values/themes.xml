@@ -1,0 +1,36 @@
+<resources>
+    <style name="Base.Theme.Habiton" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/highlight</item>
+    </style>
+
+    <style name="Theme.Light" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/highlight</item>
+        <item name="colorPrimaryDark">@color/backing_light</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:navigationBarColor">@color/backing_light</item>
+        <item name="android:colorBackground">@color/backing_light</item>
+        <item name="highlight">@color/highlight</item>
+        <item name="module">@color/module</item>
+        <item name="backing_light">@color/backing_light</item>
+
+    </style>
+
+    <style name="Theme.Dark" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/backing_dark</item>
+        <item name="colorPrimaryDark">@color/backing_dark</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:navigationBarColor">@color/backing_dark</item>
+        <item name="android:colorBackground">@color/backing_dark</item>
+        <item name="highlight">@color/highlight_dark</item>
+        <item name="module">@color/module_dark</item>
+        <item name="backing_light">@color/backing_dark</item>
+    </style>
+
+    <style name="Radius10dp">
+        <item name="android:radius">10dp</item>
+    </style>
+
+    <style name="Radius20dp">
+        <item name="android:radius">20dp</item>
+    </style>
+</resources>

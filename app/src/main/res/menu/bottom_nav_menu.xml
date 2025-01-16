@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/DashboardFragment"
+        android:icon="@drawable/habit_overview_icon"
+        android:title=""
+       />
+
+    <item
+        android:id="@+id/createButton"
+        android:icon="@drawable/plus_icon"
+        android:title=""
+       />
+
+    <item
+        android:id="@+id/analyticsFragment"
+        android:icon="@drawable/analytics_icon"
+        android:title=""/>
+
+</menu>
