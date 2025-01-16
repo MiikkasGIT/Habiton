@@ -38,6 +38,3 @@ Geplante Features:
 - Synchronisation über mehrere Geräte.
 - Unterstützung für Widgets auf dem Homescreen.
 - Integration mit Kalender-Apps, um Gewohnheiten besser zu planen.
-
-## Lizenz
-Dieses Projekt steht unter der MIT-Lizenz. Siehe [LICENSE](LICENSE) für weitere Informationen.
