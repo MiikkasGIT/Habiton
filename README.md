@@ -10,8 +10,6 @@
 - **Progress Tracking**: Verfolge deinen Fortschritt mit Streaks und Abschlussraten.
 - **Benutzerfreundliche Oberfläche**: Minimalistisches Design für eine intuitive Nutzung.
 
-![Habiton Analytics](./Habiton-Analytics.png)
-
 ## Technologie-Stack
 - **Programmiersprache**: Java
 - **Plattform**: Android
@@ -22,7 +20,7 @@
 ### 1. Dashboard
 Das Dashboard zeigt eine Übersicht deiner aktuellen Gewohnheiten. Du kannst neue Gewohnheiten hinzufügen, bestehende bearbeiten oder löschen.
 
-![Habiton Dashboard](./Habiton-Dashboard.png)
+<img src="./Habiton-Dashboard.png" alt="Habiton Analytics" width="400px">
 
 ### 2. Erinnerungen
 - Stelle Erinnerungen ein, um Benachrichtigungen zu erhalten.
@@ -32,6 +30,8 @@ Das Dashboard zeigt eine Übersicht deiner aktuellen Gewohnheiten. Du kannst neu
 - Analysiere deinen Fortschritt wöchentlich, monatlich oder jährlich.
 - Statistiken zu Best-Streaks und Abschlussraten.
 - Übersicht über alle Gewohnheiten und deren Erfüllungsstatus.
+
+<img src="./Habiton-Analytics.png" alt="Habiton Analytics" width="400px">
 
 ## Ausblick
 Geplante Features:
